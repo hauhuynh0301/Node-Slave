@@ -1,106 +1,70 @@
-# react.js hello world
----
-first, you should install node and npm.
+# Getting Started with Create React App
 
-1. create directory  
-    `mkdir helloworld && cd helloworld`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-2. init npm  
-    `npm init`
+## Available Scripts
 
-3. install webpack and webpack-dev-server  
-    `npm install webpack webpack-dev-server --save`
+In the project directory, you can run:
 
-4. install react and react-dom  
-    `npm install react react-dom --save`
+### `yarn start`
 
-5. install babel etc.  
-    `npm install babel-core babel-loader babel-preset-react babel-preset-es2015 --save`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-6. add start scripts to package.json
-```javascript
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "webpack-dev-server --hot"
-    }
-```
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-7. touch webpack.config.js
-```javascript
-    var config = {
-      entry: './main.js',
+### `yarn test`
 
-      output: {
-        path: './',
-        filename: 'index.js'
-      },
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-      devServer: {
-        inline: true,
-        port: 7777
-      },
+### `yarn build`
 
-      module: {
-        loaders: [
-          {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-              presets: ['es2015', 'react']
-            }
-          }
-        ]
-      }
-    }
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    module.exports = config;
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-8. touch index.html
-```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>react helloworld</title>
-      </head>
-      <body>
-        <div id="app"></div>
-        <script src="index.js" charset="utf-8"></script>
-      </body>
-    </html>
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-9. touch App.jsx
-```javascript
-    import React from 'react';
+### `yarn eject`
 
-    class App extends React.Component {
-      render() {
-        return (
-          <div>simon, helloworld!!!</div>
-        );
-      }
-    }
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-    export default App;
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-10. touch main.js
-```javascript
-    import React from 'react';
-    import ReactDOM from 'react-dom';
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-    import App from './App.jsx';
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-    ReactDOM.render(<App />, document.getElementById('app'));
-```
+## Learn More
 
-11. start server  
-    `npm start`
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-12. open browser: [http://localhost:7777](http://localhost:7777)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
----
-if you clone this repository to local, just `npm install` and `npm start`.
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
