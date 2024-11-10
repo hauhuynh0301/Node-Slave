@@ -14,7 +14,7 @@ RUN npm install
 COPY . /app/
 
 # Step 6: Expose port 7777 (default port for webpack-dev-server)
-EXPOSE 7777
+EXPOSE 7777 3000
 
 # Step 7: Set the command to start webpack-dev-server
 CMD ["npm", "start"]
