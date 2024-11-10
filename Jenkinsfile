@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         // Define the Docker Hub credentials ID stored in Jenkins (you'll need to set this up)
-        DOCKER_CREDENTIALS = 'ea2b9534-f5ab-4172-8284-a88ab435bf2b'
-        DOCKER_IMAGE = 'hauhtc/react-hello-world'
+        DOCKER_CREDENTIALS = 'dckr_pat_4pUbmn6E_jyE7vK_Q16FW2Gk8EQ'
+        DOCKER_IMAGE = 'longn1/react-hello-world'
         TAG = ''  // Will be dynamically set based on commit ID
         GIT_REPO = 'https://github.com/hauhuynh0301/Node-Slave.git' // Your GitHub repository URL
     }
